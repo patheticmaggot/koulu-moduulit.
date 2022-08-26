@@ -1,2 +1,1 @@
 print("Hello World!lol")
-print("AAAAAAAAAAAAAAAAAAA SAAAAAAAAATANAAAAAAA")
