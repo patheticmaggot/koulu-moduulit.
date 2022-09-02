@@ -9,7 +9,7 @@ if luku1.isnumeric():
     while True:
         luku2 = input('laita luku: ')
         if luku2.isnumeric():
-            luku2 =float(luku2)
+            luku2 = float(luku2)
             print(luku2)
             if luku2 >= maxluku:
                 maxluku = luku2
@@ -17,5 +17,5 @@ if luku1.isnumeric():
                 minluku = luku2
         else:
             break
-print('isoin numero oli ' + str(maxluku))
-print('pienin numero oli ' + str(minluku))
+print('isoin numero oli: ' + str(maxluku))
+print('pienin numero oli: ' + str(minluku))
