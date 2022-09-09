@@ -18,4 +18,4 @@ while kokonaisluku != '':
         kokonaisluku = input('anna kokonaisluku tai lopeata enterillä: ')
 
 tulos = summaaja(lista)
-print(tulos)
+print(f'lukujen summa on: {tulos}')
