@@ -2,7 +2,7 @@ lukujoukko = []
 
 uusiluku = input('anna luku tai lopeata entterillä: ')
 
-while uusiluku.isnumeric():
+while uusiluku.strip('-').isnumeric():
     lukujoukko.append(float(uusiluku))
     uusiluku = input('anna luku tai lopeata enterillä: ')
 if uusiluku != '':

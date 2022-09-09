@@ -11,7 +11,7 @@ paritettulista = []
 kokonaisluku = input('anna kokonaisluku tai lopeata entterillä: ')
 
 while kokonaisluku != '':
-    if (kokonaisluku.strip('-')).isnumeric():
+    if kokonaisluku.strip('-').isnumeric():
         lista.append(int(kokonaisluku))
         kokonaisluku = input('anna kokonaisluku tai lopeata enterillä: ')
     else:
