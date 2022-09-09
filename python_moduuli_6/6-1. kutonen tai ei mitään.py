@@ -15,4 +15,4 @@ while tulos != 6:
     tulos = nopan_heitto()
 
 print(tulos)
-print(f'heittoja tarvitsit {kerrat} että tulokseksi tuli 6.')
+print(f'heittoja tarvitsit {kerrat}, että tulokseksi tuli 6.')
