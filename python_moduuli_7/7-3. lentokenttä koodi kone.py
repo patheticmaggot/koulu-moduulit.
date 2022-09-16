@@ -1,4 +1,4 @@
-valikko = input('haluatko lisätä uuden lentokentän, katsoa vanhempia lisäyksiä vai lopettaa? (uusi, haku, lopeta): ')
+valikko = input('lisää uusi lentokenttä,(uusi)\nhae vanhempia lisäyksiä,(haku)\nlopeta.(lopeta)\n: ')
 
 lentokentat = {}
 
@@ -15,5 +15,5 @@ while valikko != 'lopeta':
             print('ICAO-koodia ei ole järjestelmässä.')
     else:
         print('tätä komentoa ei ole järjestelmässä.')
-    valikko = input('haluatko lisätä uuden lentokentän, katsoa vanhempia lisäyksiä vai lopettaa? (uusi, haku, lopeta): ')
+    valikko = input('lisää uusi lentokenttä,(uusi)\nhae vanhempia lisäyksiä,(haku)\nlopeta.(lopeta)\n: ')
 print('järjestelmä suljettu.')
