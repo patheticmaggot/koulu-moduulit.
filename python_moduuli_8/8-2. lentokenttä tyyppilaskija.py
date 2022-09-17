@@ -17,9 +17,10 @@ yhteys = mysql.connector.connect(
 
 iso_country = input("Anna maa-koodi : ")
 type_varasto = ('balloonport', 'seaplane_base', 'heliport', 'small_airport', 'medium_airport', 'large_airport', 'closed')
-type_varasto_s = ('kuumailmapallokenttä', 'lentosatama', 'helikopterikenttä', 'pieni lentokenttä', 'keskikokoinen lentokenttä', 'suuri lentokenttä', 'suljettu')
+type_varasto_s = ('kuumailmapallokenttiä', 'lentosatamia', 'helikopterikenttiä', 'pieniä lentokenttiä', 'keskikokoisia lentokenttiä', 'suuria lentokenttiä', 'suljettuja lentokenttiä')
 
 
 for type in range(len(type_varasto)):
     tulos = lentokenttahakija(yhteys, iso_country, type_varasto[type])
-    print(f'lentokenttä tyyppiä: "{type_varasto_s[type]}" on {tulos} kappaletta.')
+    if tulos > 0:
+        print(f'{type_varasto_s[type]} on: {tulos}')
