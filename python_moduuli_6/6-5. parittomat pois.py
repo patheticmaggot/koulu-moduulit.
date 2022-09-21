@@ -20,3 +20,4 @@ while kokonaisluku != '':
 
 tulos = parittaja(lista)
 print(f'tässä parilliset luvut: {tulos}')
+print(f'tässä kaikki luvut: {lista}')
