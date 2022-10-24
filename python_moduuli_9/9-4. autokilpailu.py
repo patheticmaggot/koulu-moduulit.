@@ -19,3 +19,6 @@ class Auto:
 kilpailijat = []
 
 for k in range(10):
+    kilpailijat.append(f'auto{k}')
+
+
