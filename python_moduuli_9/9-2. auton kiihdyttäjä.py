@@ -13,8 +13,10 @@ class Auto:
         else:
             self.nopeus += muutos
 
+
 auto1 = Auto('ABC-123', 142)
-print(f'auto 1: \nrekisteritunnus = {auto1.rekkari} \nhuippunopeus = {auto1.huippunopeus} \nnykyinen nopeus = {auto1.nopeus} \nkuljettu matka = {auto1.matka}\n')
+print(f'auto 1: \nrekisteritunnus = {auto1.rekkari} \nhuippunopeus = {auto1.huippunopeus} '
+      f'\nnykyinen nopeus = {auto1.nopeus} \nkuljettu matka = {auto1.matka}\n')
 
 
 auto1.kiihdyta(30)
