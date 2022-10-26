@@ -6,6 +6,7 @@ class Hissi:
         self.idhissi = idhissi
 
     def siirry_kerrokseen(self, kkerros):
+        print(f'Hissi {self.idhissi}')
         if self.ylink >= kkerros >= self.alink:
             if kkerros < self.nykyk:
                 while kkerros != self.nykyk:
@@ -14,9 +15,9 @@ class Hissi:
                 while kkerros != self.nykyk:
                     self.kerros_ylos()
             else:
-                print('Olet jo kerroksessa.')
+                print('on jo kyseisessä kerroksessa.')
         else:
-            print('kerros out of range.')
+            print('kyseistä kerrosta ei ole.')
 
     def kerros_ylos(self):
         self.nykyk += 1
@@ -38,21 +39,28 @@ class Talo:
     def aja_hissia(self, idhissi, kkerros):
         self.hissit[(idhissi - 1)].siirry_kerrokseen(kkerros)
 
+    def palohalyytys(self):
+        for hissi in range(self.hissimaara):
+            self.hissit[hissi].siirry_kerrokseen(self.alink)
+
 
 talo1 = Talo(11, 1, 5)
 
-for i in talo1.hissit:
-    print(i.idhissi, i.ylink, i.alink, i.nykyk)
 
-aloitus = input('tyhjä jatkaa. laita jotain lopettaaksesi: ')
-while aloitus == '':
+valikko = input('valikko\npoistu hissikontrollihuoneesta (u)\njatka entterillä\n')
+while valikko != 'u':
     hissinnumero = int(input('anna hissin numero: '))
     if hissinnumero < 1 or hissinnumero > talo1.hissimaara:
         print('tällaista hissin numeroa ei ole')
     else:
         kohdekerros = int(input('mihin kerrokseen: '))
         talo1.aja_hissia(hissinnumero, kohdekerros)
-        aloitus = input('tyhjä jatkaa. laita jotain lopettaaksesi: ')
+        valikko = input('\nvalikko\npoistu hissikontrollihuoneesta (u)\njatka entterillä\n')
 
-for i in talo1.hissit:
-    print(i.idhissi, i.ylink, i.alink, i.nykyk)
+for hissi in talo1.hissit:
+    if hissi.nykyk == hissi.alink:
+        print(f'Hissi {hissi.idhissi} on {hissi.nykyk} kerroksessa (pohjakerros).')
+    elif hissi.nykyk == hissi.ylink:
+        print(f'Hissi {hissi.idhissi} on {hissi.nykyk} kerroksessa (ylin kerros).')
+    else:
+        print(f'Hissi {hissi.idhissi} on {hissi.nykyk} kerroksessa.')

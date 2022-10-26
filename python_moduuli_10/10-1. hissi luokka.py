@@ -28,6 +28,5 @@ class Hissi:
 
 h = Hissi(9, 1)
 
-while True:
-    anna = int(input('anna kerros: '))
-    h.siirry_kerrokseen(anna)
+h.siirry_kerrokseen(5)
+h.siirry_kerrokseen(1)
