@@ -50,10 +50,16 @@ for k in range(1, 11):
 
 kisa1 = Kilpailu('Suuri romuralli', 8000, autolista)
 
+tuntilaskuri = 0
+
 while kisa1.kilpailu_ohi() != True:
     kisa1.tunti_kuluu()
-    tuntilaskuri = 0
+    tuntilaskuri += 1
     if tuntilaskuri % 10 == 0:
+        print(f'\ntilanne {tuntilaskuri} tunnin kohdalla:')
         kisa1.tulosta_tilanne()
     kisa1.kilpailu_ohi()
-    tuntilaskuri += 1
+
+print('\nkisan lopputulos:')
+kisa1.tulosta_tilanne()
+print(f'\nkisassa meni {tuntilaskuri} tuntia.')
