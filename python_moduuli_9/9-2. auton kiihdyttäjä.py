@@ -22,6 +22,6 @@ print(f'auto 1: \nrekisteritunnus = {auto1.rekkari} \nhuippunopeus = {auto1.huip
 auto1.kiihdyta(30)
 auto1.kiihdyta(70)
 auto1.kiihdyta(50)
-print(f'auton nopeus: {auto1.nopeus}')
+print(f'auton nopeus: {auto1.nopeus} km/h')
 auto1.kiihdyta(-200)
-print(f'auton nopeus: {auto1.nopeus}')
+print(f'auton nopeus: {auto1.nopeus} km/h')
