@@ -45,8 +45,8 @@ class Kilpailu:
 
 autolista = []
 
-for k in range(1, 11):
-    autolista.append(Auto(k, f'ABC-{k}', random.randint(100, 200)))
+for k in range(10):
+    autolista.append(Auto((k + 1), f'ABC-{k + 1}', random.randint(100, 200)))
 
 kisa1 = Kilpailu('Suuri romuralli', 8000, autolista)
 
